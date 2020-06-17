@@ -90,7 +90,7 @@ const Dashboard: React.FC = () => {
   }, []);
 
   function handleSelectCategory(id: number): void {
-    setSelectedCategory(id);
+    setSelectedCategory(prevState => (prevState === id ? undefined : id));
   }
 
   return (
